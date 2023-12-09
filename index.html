@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Confession</title>
+    <style>
+      body {
+        font-size: 15pt;
+      }
+      
+      button {
+        border: 2px solid blue;
+        padding: 15px;
+        border-radius: 15px;
+        display: flex;
+        background-color: yellowgreen;
+        margin: 0 auto;
+        margin-top: 300px;
+      }
+      
+      button:hover {
+        background-color: #BEC3FF;
+        border: 2px solid #448205;
+      }
+    </style>
+</head>
+<body>
 
+<!-- Button to start video and sound -->
+<button id="startButton" onclick="startVideo()">Click me to get a random Confession</button>
+
+<!-- Local video player with autoplay and disabled controls (initially hidden) -->
+<video id="myVideo" width="350" height="315" style="display: none;" autoplay muted loop disableRemotePlayback>
+    <source src="Rick Roll.mp4" type="video/mp4">
+</video>
+
+<!-- Background sound with autoplay (initially hidden) -->
+<audio id="myAudio" style="display: none;" autoplay loop>
+    <source src="Rick Roll.mp3" type="audio/mp3">
+</audio>
+
+<script>
+    function startVideo(event) {
+        var video = document.getElementById("myVideo");
+        var audio = document.getElementById("myAudio");
+        var button = document.getElementById("startButton");
+
+        // Show and play video
+        video.style.display = "block";
+        video.play();
+        alert("Gotchaa")
+        alert("You have been Rick Rolled!")
+        alert("You can't stop it")
+
+        // Show and play audio
+        audio.style.display = "block";
+        audio.play();
+
+        // Hide the button
+        button.style.display = "none";
+
+        // Prevent the default form submission behavior
+        event.preventDefault();
+        
+    }
+</script>
+
+</body>
+  </html>
+  
